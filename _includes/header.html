@@ -1,0 +1,13 @@
+<header id="header">
+            <h1>{{ site.cliente }}</h1>
+            <img src="images/logo.png" width="100px"/>
+            <p>{{ site.clienteInfo }}</p>
+            <ul class="icons">
+                {% if site.clienteTwitter %}
+                <li><a href="https://twitter.com/{{ site.clienteTwitter }}" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
+                {% endif %} {% if site.clienteIG %}
+                <li><a href="https://www.instagram.com/{{ site.clienteIG }}" class="icon fa-instagram"><span class="label">Instagram</span></a></li>{% endif %} {% if site.clienteGithub %}
+                <li><a href="https://github.com/{{ site.clienteGithub }}" class="icon fa-github"><span class="label">Github</span></a></li>{% endif %} {% if site.clienteEmail %}
+                <li><a href="mailto:{{ site.clienteEmail }}" class="icon fa-envelope-o"><span class="label">Email</span></a></li>{% endif %}
+            </ul>
+        </header>

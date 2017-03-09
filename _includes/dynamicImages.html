@@ -1,0 +1,11 @@
+ {% for image in site.static_files %} {% if image.path contains 'images/thumbs' %}
+<article>
+    {% assign imageName = image.path %} {% assign imageURL = imageName | remove:'/images/thumbs/' %} {% assign imageURL = imageURL | replace: " ", "%20" %}
+    <a class="thumbnail" href="{{ site.baseurl }}/images/fulls/{{ imageURL }}">
+        <img src="{{ site.baseurl }}/images/thumbs/{{ imageURL }}" alt="" />
+    </a>
+    {% assign imageName = imageName | remove:'/images/thumbs/' %} {% assign imageName = imageName | remove:'.jpg' %} {% assign imageName = imageName | remove:'.png' %}
+    <!--h2>{{ imageName }}</h2>
+    <p>Description.</p-->
+</article>
+{% endif %} {% endfor %}
