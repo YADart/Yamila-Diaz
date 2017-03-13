@@ -1,108 +1,44 @@
-Lens by HTML5 UP
-html5up.net | @ajlkn
-Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+# Template Lens
 
+Por [FWebistes](productions.github.io)
 
-This is Lens, a full screen (and entirely responsive) photo gallery design. Unlike previous
-designs I've done in this vein (Parallelism, for instance), this one eschews the usual
-lightbox in favor of a completely full screen experience -- one that I'm happy to say
-translates awesomely all the way down to the tiniest of mobile devices. Full instructions
-below!
+## Instrucciones del sitio
 
-Demo images* courtesy of Unsplash, a radtastic collection of CC0 (public domain) images
-you can use for pretty much whatever.
+Para agregar imagenes al sitio, entrar al [directorio de imagenes](./images) y dentro de este directorio se encuentran dos directorios mas, [fulls](./images/fulls) y [thumbs](./images/thumbs).
 
-(* = Not included)
+### Fulls
 
-Feedback, bug reports, and comments are not only welcome, but strongly encouraged :)
+Fulls son las imagenes grandes que se ven al elegir una imagen. Las imagenes pueden tener un titulo, y este titulo seria el nombre de la imagen, puede desactivarse si se desea.
 
-AJ
-aj@lkn.io | @ajlkn
+**Es muy importante que las imagenes tengan solo letras y numeros**, y, si se desea aunque no es muy recomendado, que contengan espacios.
 
+Estas ocupan gran parte del sitio y se les aplica un zoom para que ocupen todo el ancho de su espacio, por ende si la imagen es alta, y no ancha, se va a ver solo una parte porque se va a aplicar un zoom. Es recomendable que estas imagenes tengan un tamaño de [aspecto de 16 : 9](https://pacoup.com/2011/06/12/list-of-true-169-resolutions/) (el link prove todas las opciones disponibles), pero el tamaño ideal seria **que la imagen sea 1920 pixeles de ancho y 1080 pixeles de alto**.
 
-Instructions:
+Un ejemplo, digamos que tenemos esta imagen:
 
-	Overview:
+![ejemplo](./readmeFiles/ejemplo.jpg)
 
-		Lens is made up of three primary components:
+Si subimos esta imagen, la cual es alta y no ancha, el sitio la modificaria para que se vea asi:
 
-		- The "main wrapper": The skinny little column on the right. Home to what little
-		  "regular" content you may have (header, footer, anything else you want to cram
-		  in there), as well as ...
+![alta](./readmeFiles/alta.jpg)
 
-		- The "thumbnails" section: A grid of thumbnails pointing to their respective
-		  full size images.
+Lo correcto, para evitar eso, seria aplicar una edicion, para que se vea ancha, por ejemplo realizar algo asi:
 
-		- The "viewer": Basically the rest of the page, and basically where your full size
-		  images will show up when a thumbnail is clicked.
+![barco](./readmeFiles/barco.jpg)
 
-		Note: Only the main wrapper and the thumbnails section are actually present in
-		index.html. The viewer will be dynamically created on page load.
+Y en el sitio se veria asi:
 
-	How it works:
+![formateada](./readmeFiles/formateada.jpg)
 
-		Just add your thumbnails to the thumbnails section in the following format:
+### Thumbs
 
-			<article>
-				<a class="thumbnail" href="path/to/fullsize.jpg">
-					<img src="path/to/thumbnail.jpg" alt="" />
-				</a>
-				<h2>Title</h2>
-				<p>Description.</p>
-			</article>
+Los thumbs son un detalle muy importante. Son las miniaturas de las imagenes que se usan para mostrar las mismas al costado, si estas imagenes no son agregadas, se usan las imagenes grandes automaticamente, pero esto hace que el sitio tarde mucho mas en cargar (y si tarda mucho la gente puede irse antes de que termine) asi que es muy recomendado usar miniaturas para hacer que la carga sea muchisimo mas rapida.
 
-		And that's it. Lens will figure out the rest.
+Los requisitos para que los thumbs anden correctamente son los siguientes:
+- Tienen que estar en la carpeta [thumbs](./images/thumbs).
+- Tienen que tener **el mismo nombre que la imagen grande**, mismos caracteres y mayusculas.
+- Tienen que tener todas el mismo tamaño, en lo posible 360 alto x 225 ancho, ya que las mismas son modificadas para que ocupen ese tamaño en una grilla, y si no tienen ese tamaño van a deformarse.
 
-	The "data-position" attribute:
+---
 
-		As a full screen experience, the viewer will be subject to changes in its size and,
-		consequently, its aspect ratio. Since your full size images are basically applied as
-		backgrounds to the viewer itself, this means they'll probably (okay, definitely) get
-		cropped. All is not lost, however, as you can use the optional "data-position" attribute
-		to control how the full size image is positioned within the viewer. To do this, simply
-		add it to your thumbnail's <a> element and set it to any valid "background-position"
-		value. For example, this:
-
-			<a class="thumbnail" href="path/to/fullsize.jpg" data-position="top left">...</a>
-
-		... positions this particular full size image in the top left corner of the viewer (as
-		opposed to its center, the default), effectively limiting cropping to everything but
-		the top left corner.
-
-	Keyboard shortcuts:
-
-		Lens is set up to respond to the following keyboard shortcuts:
-
-		- Left Arrow: Go to previous image.
-		- Right Arrow: Go to next image.
-		- Up Arrow: Go to image above the current one in the thumbnails section.
-		- Down Arrow: Go to image below the current one in the thumbnails section.
-		- Space: Go to next image.
-		- Escape: Toggle the main wrapper.
-
-		Note: All keyboard shortcuts are disabled when the "xsmall" breakpoint is active
-		(since they don't really make a whole lot of sense there).
-
-	Other stuff:
-
-		- The main wrapper can be moved to the left by changing the "misc.main-side" variable
-		  in assets/sass/libs/_vars.scss to "left" (and of course recompiling your CSS).
-
-		- Additional tweakable settings can be found at the top of assets/js/main.js, but
-		  be aware most of these need to sync with certain Sass variables (see comments
-		  for details).
-
-
-Credits:
-
-	Demo Images:
-		Unsplash (unsplash.com)
-
-	Icons:
-		Font Awesome (fortawesome.github.com/Font-Awesome)
-
-	Other:
-		jQuery (jquery.com)
-		html5shiv.js (@afarkas @jdalton @jon_neal @rem)
-		Respond.js (j.mp/respondjs)
-		Skel (skel.io)
+En caso de tener dudas, no duden en consultarme.

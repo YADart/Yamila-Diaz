@@ -35,6 +35,24 @@
     <script src="assets/js/skel.min.js"></script>
     <!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
     <script src="assets/js/main.js"></script>
+    <script>
+        $('.thumbnail').each(function() {
+            //if statement here 
+            // use $(this) to reference the current div in the loop
+            //you can try something like...
+            var imagePath = $(this).children("img").attr('src');
+            if (!(ImageExist(imagePath))) {
+                //$(this).addClass("PEPITO");
+                $(this).children("img").attr('src', $(this).attr('href'));
+            }
+        });
+
+        function ImageExist(url) {
+            var img = new Image();
+            img.src = url;
+            return img.height != 0;
+        }
+    </script>
 
 </body>
 
