@@ -588,6 +588,7 @@ var main = (function($) { var _ = {
 								// Wait for it to load.
 									$('<img src="' + newSlide.url + '" />').on('load', function() {
 									//window.setTimeout(function() {
+										
 
 										// Set background image.
 											newSlide.$slideImage
